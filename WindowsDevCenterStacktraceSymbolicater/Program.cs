@@ -84,7 +84,7 @@ namespace WindowsDevCenterStacktraceSymbolicater
                     SymbolicateInRightMode(_xboxPdb, "x64", "These are the symbolicated crashes for the Xbox One:");
                 }
 
-                if (_interactive || String.IsNullOrEmpty(_outputPath))
+                if (_interactive /* || String.IsNullOrEmpty(_outputPath) */)
                 {
                     Console.WriteLine("Press a key to exit");
                     Console.Read();
@@ -93,7 +93,7 @@ namespace WindowsDevCenterStacktraceSymbolicater
             catch (Exception e)
             {
                 Console.WriteLine("An error has occured:\n" + e);
-                if (_interactive || String.IsNullOrEmpty(_outputPath))
+                if (_interactive /* || String.IsNullOrEmpty(_outputPath) */)
                 {
                     Console.WriteLine("Press a key to exit");
                     Console.Read();
